@@ -37,9 +37,13 @@ import java.util.Scanner;
 					 
 					 int rowsInserted = pstmt.executeUpdate();
 					 if (rowsInserted >0) {System.out.println("Data Saved!");}
+					 
+					 
 					 		            
 					//step 3: create the statement object
-					//Statement stmt = con.createStatement();
+					Statement stmt = con.createStatement();
+					stmt.executeUpdate("select * from student");
+					System.out.println(stmt);
 
 					//step 4: execute the querie
 
